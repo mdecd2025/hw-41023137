@@ -27,6 +27,34 @@
 <p style="padding-left: 30px;"><span>fossil的設定：<a href="https://mde.tw/cd2025/content/Fossil.html">https://mde.tw/cd2025/content/Fossil.html</a></span></p>
 <p style="padding-left: 30px;"><strong>w5：介紹webots的用法與功能及更新wscite</strong></p>
 <p style="padding-left: 30px;">把這個<a href="http://229.cycu.org/Webots_2025a.7z">Webots_2025a.7z</a>下載並解壓縮到可攜data目錄內，然後開啟start.bat使用其中的小黑窗cmd輸入指令webotsw就能夠開啟程式。</p>
+<h4 dir="auto"><span>什麼是 Webots？</span></h4>
+<p><span><span>Webots是一款專業的行動機器人模擬軟體套件。它提供了一個快速原型環境，讓使用者可以創建具有質量、關節、摩擦係數等物理特性的 3D 虛擬世界。</span></span></p>
+<p><span><span>使用者可以添加簡單的被動物件或稱為移動機器人的主動物件。這些機器人可以有不同的運動方案（輪式機器人、腿部機器人或飛行機器人）。此外，它們可能配備有許多感測器和執行器裝置，例如距離感測器、驅動輪、攝影機、馬達、觸控感測器、發射器、接收器等。</span></span></p>
+<p><span><span>最後，使用者可以單獨對每個機器人進行編程，以表現出所需的行為。 Webots包含大量的機器人模型和控制器程式範例，幫助使用者入門。</span></span></p>
+<p><span><span>Webots 還包含許多與真實移動機器人的接口，因此一旦您的模擬機器人表現如預期，您就可以將其控製程序轉移到真實的機器人，如 e-puck、DARwIn-OP、Nao 等。</span></span></p>
+<h4><span><span>Webots 模擬：</span></span></h4>
+<p><span><span>Webots 模擬由以下項目組成：</span></span></p>
+<p><span><span>定義一個或多個機器人及其環境的 Webots 世界檔案 (.wbt)。 .wbt 檔案有時確實依賴外部 PROTO 檔案 (.proto) 和紋理。</span></span></p>
+<p><span><span>一個或多個用於上述機器人的控制器程式（C/C++/Java/Python/MATLAB 語言）。</span></span></p>
+<p><span><span>可選的實體插件，可用於修改 Webots 常規物理行為（在 C/C++ 中）。</span></span></p>
+<h4><span><span>什麼是世界？</span></span></h4>
+<p><span><span>在 Webots 中，世界是對機器人及其環境屬性的 3D 描述。它包含每個物件的描述：位置、方向、幾何形狀、外觀（如顏色或亮度）、物理屬性、物件類型等。</span></span></p>
+<p><span><span>世界被組織為層次結構，其中物件可以包含其他物件（類似於 VRML97）。</span></span></p>
+<p><span><span>例如，一個機器人可以包含兩個輪子、一個距離感測器和一個本身包含攝影機的關節等。</span></span></p>
+<p><span><span>世界文件不包含機器人的控制器程式碼；它僅指定每個機器人所需的控制器的名稱。世界保存在“.wbt”文件中。 「.wbt」檔案儲存在每個 Webots 專案的「worlds」子目錄中。</span></span></p>
+<h4><span><span>什麼是控制器？</span></span></h4>
+<p><span><span>控制器是一種控制世界文件中指定的機器人的電腦程式。</span></span></p>
+<p><span><span>控制器可以用 Webots 支援的任何程式語言編寫：C、C++、Java、Python 或 MATLAB。</span></span></p>
+<p><span><span>當模擬開始時，Webots 會啟動指定的控制器（每個控制器作為單獨的進程），並將控制器進程與模擬機器人關聯起來。</span></span></p>
+<p><span><span>請注意，多個機器人可以使用相同的控制器程式碼，但是每個機器人都會啟動不同的進程。</span></span></p>
+<p><span><span>有些程式語言需要編譯（C 和 C++），其他語言需要解釋（Python 和 MATLAB），有些需要編譯和解釋（Java）。</span></span></p>
+<p><span><span>例如，C 和 C++ 控制器被編譯為平台相關的二進位可執行檔（例如 Windows 下的“.exe”）。</span></span></p>
+<p><span><span>Python 和 MATLAB 控制器由對應的執行時間系統（必須安裝）解釋。</span></span></p>
+<p><span><span>Java 控制器需要編譯為字節碼（“.class”檔案或“.jar”），然後由 Java 虛擬機器解釋。</span></span></p>
+<p><span><span>每個控制器的來源檔案和二進位檔案都一起儲存在一個控制器目錄中。每個 Webots 專案的「控制器」子目錄中都會有一個控制器目錄。</span></span></p>
+<h4><span><span>什麼是主管控制器？</span></span></h4>
+<p><span><span>主管控制器是主管欄位設定為 TRUE 的機器人的控制器，它可以執行通常只能由人類操作員而不能由真實機器人執行的操作。</span></span></p>
+<p><span><span>Supervisor 控制器可以用上述任何一種程式語言編寫。然而，與常規機器人控制器不同的是，Supervisor 控制器可以存取特權操作。特權操作包括模擬控制，例如將機器人移動到隨機位置、對模擬進行視訊擷取等。</span></span></p>
 <p style="padding-left: 30px;">將<a href="http://229.cycu.org/wscite_5.5.5.7z">wscite_5.5.5.7z</a>下載後解壓並與<a href="http://229.cycu.org/portable_wcm2025.7z">portable_wcm2025.7z</a> data目錄中的wscite進行更換，以將小白窗更新至最新版本，因為舊版的wscite有bug</p><h2>w3</h2><h1>list</h1>
 <p><a href="https://mdecd2025.github.io/hw-41023137/content/Brython.html?src=https://gist.githubusercontent.com/41023137/fff8d8095437ab9fc4a95d445cf2d251/raw/18c98d31267f38c19bc315b6ae4f9678337ff919/w1_hw_1">學員作業網站與倉儲連結</a></p>
 <p><a href="https://mdecd2025.github.io/hw-41023137/content/Brython.html?src=https://gist.githubusercontent.com/41023137/71058c967835d818d7069eec4bf57706/raw/62d3eb91e0901e8a12dabcbfd33404d9bcbb56cb/w1_hw_2">分組網站與倉儲連結</a></p>
