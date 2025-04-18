@@ -27,34 +27,6 @@
 <p style="padding-left: 30px;"><span>fossil的設定：<a href="https://mde.tw/cd2025/content/Fossil.html">https://mde.tw/cd2025/content/Fossil.html</a></span></p>
 <p style="padding-left: 30px;"><strong>w5：介紹webots的用法與功能及更新wscite</strong></p>
 <p style="padding-left: 30px;">把這個<a href="http://229.cycu.org/Webots_2025a.7z">Webots_2025a.7z</a>下載並解壓縮到可攜data目錄內，然後開啟start.bat使用其中的小黑窗cmd輸入指令webotsw就能夠開啟程式。</p>
-<h4 dir="auto"><span>什麼是 Webots？</span></h4>
-<p><span><span>Webots是一款專業的行動機器人模擬軟體套件。它提供了一個快速原型環境，讓使用者可以創建具有質量、關節、摩擦係數等物理特性的 3D 虛擬世界。</span></span></p>
-<p><span><span>使用者可以添加簡單的被動物件或稱為移動機器人的主動物件。這些機器人可以有不同的運動方案（輪式機器人、腿部機器人或飛行機器人）。此外，它們可能配備有許多感測器和執行器裝置，例如距離感測器、驅動輪、攝影機、馬達、觸控感測器、發射器、接收器等。</span></span></p>
-<p><span><span>最後，使用者可以單獨對每個機器人進行編程，以表現出所需的行為。 Webots包含大量的機器人模型和控制器程式範例，幫助使用者入門。</span></span></p>
-<p><span><span>Webots 還包含許多與真實移動機器人的接口，因此一旦您的模擬機器人表現如預期，您就可以將其控製程序轉移到真實的機器人，如 e-puck、DARwIn-OP、Nao 等。</span></span></p>
-<h4><span><span>Webots 模擬：</span></span></h4>
-<p><span><span>Webots 模擬由以下項目組成：</span></span></p>
-<p><span><span>定義一個或多個機器人及其環境的 Webots 世界檔案 (.wbt)。 .wbt 檔案有時確實依賴外部 PROTO 檔案 (.proto) 和紋理。</span></span></p>
-<p><span><span>一個或多個用於上述機器人的控制器程式（C/C++/Java/Python/MATLAB 語言）。</span></span></p>
-<p><span><span>可選的實體插件，可用於修改 Webots 常規物理行為（在 C/C++ 中）。</span></span></p>
-<h4><span><span>什麼是世界？</span></span></h4>
-<p><span><span>在 Webots 中，世界是對機器人及其環境屬性的 3D 描述。它包含每個物件的描述：位置、方向、幾何形狀、外觀（如顏色或亮度）、物理屬性、物件類型等。</span></span></p>
-<p><span><span>世界被組織為層次結構，其中物件可以包含其他物件（類似於 VRML97）。</span></span></p>
-<p><span><span>例如，一個機器人可以包含兩個輪子、一個距離感測器和一個本身包含攝影機的關節等。</span></span></p>
-<p><span><span>世界文件不包含機器人的控制器程式碼；它僅指定每個機器人所需的控制器的名稱。世界保存在“.wbt”文件中。 「.wbt」檔案儲存在每個 Webots 專案的「worlds」子目錄中。</span></span></p>
-<h4><span><span>什麼是控制器？</span></span></h4>
-<p><span><span>控制器是一種控制世界文件中指定的機器人的電腦程式。</span></span></p>
-<p><span><span>控制器可以用 Webots 支援的任何程式語言編寫：C、C++、Java、Python 或 MATLAB。</span></span></p>
-<p><span><span>當模擬開始時，Webots 會啟動指定的控制器（每個控制器作為單獨的進程），並將控制器進程與模擬機器人關聯起來。</span></span></p>
-<p><span><span>請注意，多個機器人可以使用相同的控制器程式碼，但是每個機器人都會啟動不同的進程。</span></span></p>
-<p><span><span>有些程式語言需要編譯（C 和 C++），其他語言需要解釋（Python 和 MATLAB），有些需要編譯和解釋（Java）。</span></span></p>
-<p><span><span>例如，C 和 C++ 控制器被編譯為平台相關的二進位可執行檔（例如 Windows 下的“.exe”）。</span></span></p>
-<p><span><span>Python 和 MATLAB 控制器由對應的執行時間系統（必須安裝）解釋。</span></span></p>
-<p><span><span>Java 控制器需要編譯為字節碼（“.class”檔案或“.jar”），然後由 Java 虛擬機器解釋。</span></span></p>
-<p><span><span>每個控制器的來源檔案和二進位檔案都一起儲存在一個控制器目錄中。每個 Webots 專案的「控制器」子目錄中都會有一個控制器目錄。</span></span></p>
-<h4><span><span>什麼是主管控制器？</span></span></h4>
-<p><span><span>主管控制器是主管欄位設定為 TRUE 的機器人的控制器，它可以執行通常只能由人類操作員而不能由真實機器人執行的操作。</span></span></p>
-<p><span><span>Supervisor 控制器可以用上述任何一種程式語言編寫。然而，與常規機器人控制器不同的是，Supervisor 控制器可以存取特權操作。特權操作包括模擬控制，例如將機器人移動到隨機位置、對模擬進行視訊擷取等。</span></span></p>
 <p style="padding-left: 30px;">將<a href="http://229.cycu.org/wscite_5.5.5.7z">wscite_5.5.5.7z</a>下載後解壓並與<a href="http://229.cycu.org/portable_wcm2025.7z">portable_wcm2025.7z</a> data目錄中的wscite進行更換，以將小白窗更新至最新版本，因為舊版的wscite有bug</p>
 <p style="padding-left: 30px;"><strong>w6：介紹webots的Tutorial1~5以及hw1作法</strong></p>
 <p>啟動 Webots 如果尚未安裝，請下載並安裝 Webots，並遵循這些安裝說明。</p>
@@ -162,7 +134,7 @@ int main(int argc, char **argv) {
 <p>一個世界由組織成樹結構的節點組成。 世界保存在存儲於 Webots 項目中的 .wbt 文件中。 項目還包含定義機器人行為的機器人控制器程序。 控制器可以用 C 或其他語言編寫。 C、C++ 和 Java 控制器必須顯式編譯才能運行。 控制器通過 Robot 節點的 controller 字段與機器人關聯。</p>
 <p><strong>w7：清明節放假</strong></p>
 <p><strong>w8：學習將零件檔匯入webots組合</strong></p>
-<h1>Tasks</h1>
+<p><strong>w9： 填寫期中成績表單，<span>學習使用webots streaming viewer</span></strong></p><h1>Tasks</h1>
 <h2>task1</h2>
 <p><strong>w1：建立個人倉儲網頁及分組</strong></p><h3>list</h3>
 <p><a href="https://mdecd2025.github.io/hw-41023137/content/Brython.html?src=https://gist.githubusercontent.com/41023137/fff8d8095437ab9fc4a95d445cf2d251/raw/18c98d31267f38c19bc315b6ae4f9678337ff919/w1_hw_1">學員作業網站與倉儲連結</a></p>
@@ -173,8 +145,482 @@ int main(int argc, char **argv) {
 <p><a href="https://mdecd2025.github.io/hw-41023137/content/Brython.html?src=https://gist.githubusercontent.com/41023137/71058c967835d818d7069eec4bf57706/raw/62d3eb91e0901e8a12dabcbfd33404d9bcbb56cb/w1_hw_2">分組網站與倉儲連結</a></p>
 <h2>task3</h2>
 <h2>task4</h2>
-<h2>task5</h2>
-<h2>task6</h2>
+<p><strong>w4：學習如何建立ssh協定執行作業倉儲的推送</strong></p>
+<p>參考頁面：<a href="https://mde.tw/cd2025/content/SSH.html">https://mde.tw/cd2025/content/SSH.html</a></p>
+<p>              <a href="https://mde.tw/cd2025/content/IPv6.html">https://mde.tw/cd2025/content/IPv6.html</a></p>
+<p><span>IPv6 : 2001:288:6004:17:fff1:cd25:0000:a006</span><br/><span>gateway: 2001:288:6004:17::254</span><br/><span>dns server:</span><span>2001:288:6004:17::3</span></p>
+<p><span>設定完ssh之後到控制台的網路和共用中心的乙太網路內容中的ipv6進行如上修改，</span></p>
+<p><span>然後再把倉儲中的init.py裡的ip修改為IPv6儲存即可。</span></p>
+<p><span>dynamic_port = 9444<br/>static_port = 8444</span></p>
+<p><span>這兩個是動態及靜態的port，如果要避免個人的團隊同時開啟會起衝突，可以修改這個號碼。</span></p>
+<p><span>fossil的設定：<a href="https://mde.tw/cd2025/content/Fossil.html">https://mde.tw/cd2025/content/Fossil.html</a></span></p><h2>task5</h2>
+<p>1.<strong>請用繁體中文詳細說明下列資料: <a href="https://cyberbotics.com/doc/guide/introduction-to-webots">https://cyberbotics.com/doc/guide/introduction-to-webots </a></strong></p>
+<h4 dir="auto"><span>什麼是 Webots？</span></h4>
+<p><span><span>Webots是一款專業的行動機器人模擬軟體套件。它提供了一個快速原型環境，讓使用者可以創建具有質量、關節、摩擦係數等物理特性的 3D 虛擬世界。</span></span></p>
+<p><span><span>使用者可以添加簡單的被動物件或稱為移動機器人的主動物件。這些機器人可以有不同的運動方案（輪式機器人、腿部機器人或飛行機器人）。此外，它們可能配備有許多感測器和執行器裝置，例如距離感測器、驅動輪、攝影機、馬達、觸控感測器、發射器、接收器等。</span></span></p>
+<p><span><span>最後，使用者可以單獨對每個機器人進行編程，以表現出所需的行為。 Webots包含大量的機器人模型和控制器程式範例，幫助使用者入門。</span></span></p>
+<p><span><span>Webots 還包含許多與真實移動機器人的接口，因此一旦您的模擬機器人表現如預期，您就可以將其控製程序轉移到真實的機器人，如 e-puck、DARwIn-OP、Nao 等。</span></span></p>
+<h4><span><span>Webots 模擬：</span></span></h4>
+<p><span><span>Webots 模擬由以下項目組成：</span></span></p>
+<p><span><span>定義一個或多個機器人及其環境的 Webots 世界檔案 (.wbt)。 .wbt 檔案有時確實依賴外部 PROTO 檔案 (.proto) 和紋理。</span></span></p>
+<p><span><span>一個或多個用於上述機器人的控制器程式（C/C++/Java/Python/MATLAB 語言）。</span></span></p>
+<p><span><span>可選的實體插件，可用於修改 Webots 常規物理行為（在 C/C++ 中）。</span></span></p>
+<h4><span><span>什麼是世界？</span></span></h4>
+<p><span><span>在 Webots 中，世界是對機器人及其環境屬性的 3D 描述。它包含每個物件的描述：位置、方向、幾何形狀、外觀（如顏色或亮度）、物理屬性、物件類型等。</span></span></p>
+<p><span><span>世界被組織為層次結構，其中物件可以包含其他物件（類似於 VRML97）。</span></span></p>
+<p><span><span>例如，一個機器人可以包含兩個輪子、一個距離感測器和一個本身包含攝影機的關節等。</span></span></p>
+<p><span><span>世界文件不包含機器人的控制器程式碼；它僅指定每個機器人所需的控制器的名稱。世界保存在“.wbt”文件中。 「.wbt」檔案儲存在每個 Webots 專案的「worlds」子目錄中。</span></span></p>
+<h4><span><span>什麼是控制器？</span></span></h4>
+<p><span><span>控制器是一種控制世界文件中指定的機器人的電腦程式。</span></span></p>
+<p><span><span>控制器可以用 Webots 支援的任何程式語言編寫：C、C++、Java、Python 或 MATLAB。</span></span></p>
+<p><span><span>當模擬開始時，Webots 會啟動指定的控制器（每個控制器作為單獨的進程），並將控制器進程與模擬機器人關聯起來。</span></span></p>
+<p><span><span>請注意，多個機器人可以使用相同的控制器程式碼，但是每個機器人都會啟動不同的進程。</span></span></p>
+<p><span><span>有些程式語言需要編譯（C 和 C++），其他語言需要解釋（Python 和 MATLAB），有些需要編譯和解釋（Java）。</span></span></p>
+<p><span><span>例如，C 和 C++ 控制器被編譯為平台相關的二進位可執行檔（例如 Windows 下的“.exe”）。</span></span></p>
+<p><span><span>Python 和 MATLAB 控制器由對應的執行時間系統（必須安裝）解釋。</span></span></p>
+<p><span><span>Java 控制器需要編譯為字節碼（“.class”檔案或“.jar”），然後由 Java 虛擬機器解釋。</span></span></p>
+<p><span><span>每個控制器的來源檔案和二進位檔案都一起儲存在一個控制器目錄中。每個 Webots 專案的「控制器」子目錄中都會有一個控制器目錄。</span></span></p>
+<h4><span><span>什麼是主管控制器？</span></span></h4>
+<p><span><span>主管控制器是主管欄位設定為 TRUE 的機器人的控制器，它可以執行通常只能由人類操作員而不能由真實機器人執行的操作。</span></span></p>
+<p><span><span>Supervisor 控制器可以用上述任何一種程式語言編寫。然而，與常規機器人控制器不同的是，Supervisor 控制器可以存取特權操作。特權操作包括模擬控制，例如將機器人移動到隨機位置、對模擬進行視訊擷取等。</span></span></p>
+<p><strong>2.請整理 <a href="https://cyberbotics.com/doc/guide/introduction-to-webots">https://cyberbotics.com/doc/guide/introduction-to-webots</a> 中重要的英文單字與用法, 並且針對其中所使用的英文文法逐句說明.</strong></p>
+<p><b>英文單字：</b></p>
+<table>
+<tbody>
+<tr data-end="236" data-start="175" style="height: 14.625px;">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="192" data-start="175" style="height: 14.625px;"><strong data-end="191" data-start="177">simulation</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="197" data-start="192" style="height: 14.625px;">模擬</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="236" data-start="197" style="height: 14.625px;">Noun：a simulation of robot movement</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="279" data-start="237">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="260" data-start="237"><strong data-end="259" data-start="239">software package</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="267" data-start="260">軟體套件</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="279" data-start="267">指一整套軟體工具</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="327" data-start="280">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="304" data-start="280"><strong data-end="303" data-start="282">rapid prototyping</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="313" data-start="304">快速原型製作</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="327" data-start="313">常用於產品開發與研究</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="377" data-start="328">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="353" data-start="328"><strong data-end="352" data-start="330">physics properties</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="360" data-start="353">物理特性</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="377" data-start="360">指模擬物體的質量、摩擦力等</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="419" data-start="378">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="398" data-start="378"><strong data-end="397" data-start="380">mobile robots</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="407" data-start="398">移動式機器人</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="419" data-start="407">指能移動的機器人</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="472" data-start="420">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="445" data-start="420"><strong data-end="444" data-start="422">locomotion schemes</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="452" data-start="445">移動方式</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="472" data-start="452">scheme 表示一種方案、模式</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="522" data-start="473">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="499" data-start="473"><strong data-end="498" data-start="475">sensors / actuators</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="511" data-start="499">感測器 / 執行器</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="522" data-start="511">控制與感知裝置</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="566" data-start="523">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="548" data-start="523"><strong data-end="547" data-start="525">controller program</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="555" data-start="548">控制程式</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="566" data-start="555">用於控制機器人</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="617" data-start="567">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="584" data-start="567"><strong data-end="583" data-start="569">interfaces</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="593" data-start="584">介面、接合點</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="617" data-start="593">指 Webots 與真實機器人的連接方式</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="660" data-start="618">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="636" data-start="618"><strong data-end="635" data-start="620">real robots</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="644" data-start="636">真實機器人</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="660" data-start="644">相對於模擬中的虛擬機器人</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="714" data-start="661">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="688" data-start="661"><strong data-end="687" data-start="663">multi-agent research</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="697" data-start="688">多智能體研究</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="714" data-start="697">指多個機器人協同行動的研究</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="765" data-start="715">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="739" data-start="715"><strong data-end="738" data-start="717">adaptive behavior</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="747" data-start="739">適應性行為</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="765" data-start="747">指機器人學習與環境互動的能力</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="838" data-start="766">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="803" data-start="766"><strong data-end="802" data-start="768">graphical programming language</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="813" data-start="803">圖形化程式語言</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="838" data-start="813">如 Scratch 或 BotStudio</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="890" data-start="839">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="866" data-start="839"><strong data-end="865" data-start="841">3D computer graphics</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="875" data-start="866">3D電腦圖形</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="890" data-start="875">指 3D 模型相關知識</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="933" data-start="891">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="904" data-start="891"><strong data-end="903" data-start="893">VRML97</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="915" data-start="904">虛擬實境建模語言</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="933" data-start="915">Webots 採用的語言格式</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="982" data-start="934">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="963" data-start="934"><strong data-end="962" data-start="936">support / user support</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="971" data-start="963">使用者支援</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="982" data-start="971">技術支援的通稱</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr data-end="1191" data-start="1148">
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="1165" data-start="1148"><strong data-end="1164" data-start="1150">supervisor</strong></td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="1171" data-start="1165">監督者</td>
+<td class="max-w-[calc(var(--thread-content-max-width)*2/3)]" data-end="1191" data-start="1171">在模擬中具有特權控制能力的機器人</td>
+</tr>
+</tbody>
+</table>
+<p><strong>文法說明：</strong></p>
+<p>第一段：What is Webots?<br/>Webots is a professional mobile robot simulation software package.<br/>主詞： Webots</p>
+<p>be 動詞： is</p>
+<p>補語（名詞片語）： a professional mobile robot simulation software package</p>
+<p>用法說明： 簡單現在式，用來描述「Webots 是什麼」。</p>
+<p>It offers a rapid prototyping environment, that allows the user to create 3D virtual worlds...<br/>主詞： It（= Webots）</p>
+<p>動詞： offers</p>
+<p>受詞： a rapid prototyping environment</p>
+<p>關係子句： that allows the user to create...</p>
+<p>語法重點： 這是一個限定用法的關係子句，用 that 引導（非用逗號比較正確，這裡有些文體鬆散）。</p>
+<p>These robots can have different locomotion schemes (wheeled robots, legged robots, or flying robots).<br/>情態動詞： can（表示能力或可能性）</p>
+<p>have + 名詞片語： have different locomotion schemes</p>
+<p>括號補充說明： 非限定用法，用來列舉例子（可省略不影響主句結構）</p>
+<p>They may be equipped with a number of sensor and actuator devices...<br/>may + 被動語態： may be equipped</p>
+<p>with + 名詞片語： with sensor and actuator devices</p>
+<p>語法重點： 被動語態，表示「可能會被配備」</p>
+<p>第二段：What can I do with Webots?<br/>Webots is well suited for research and educational projects...<br/>be 動詞 + 過去分詞： is suited（表被動狀態）</p>
+<p>well 修飾 suited： 程度副詞</p>
+<p>for + 名詞片語： for research and educational projects</p>
+<p>Many mobile robotics projects have relied on Webots for years...<br/>現在完成式： have relied（從過去到現在一直使用）</p>
+<p>on + 受詞： on Webots</p>
+<p>for + 時間： for years（表示持續一段時間）</p>
+<p>段落：What is a Controller?<br/>A controller is a computer program that controls a robot specified in a world file.<br/>主句： A controller is a computer program</p>
+<p>關係子句： that controls a robot</p>
+<p>分詞片語修飾 robot： specified in a world file（過去分詞，修飾 robot）</p>
+<p>語法重點： 關係子句 + 分詞修飾，表明是哪一個機器人</p>
+<p>Some programming languages need to be compiled (C and C++), other languages need to be interpreted...<br/>need to + 被動動詞： need to be compiled / interpreted</p>
+<p>列舉對比結構： some..., other...</p>
+<p>括號中的例子為補充說明</p>
+<p>Supervisor Controller 段落<br/>The Supervisor controller is the controller of a Robot whose supervisor field is set to TRUE...<br/>主句： The Supervisor controller is the controller</p>
+<p>of a Robot（介系詞片語）</p>
+<p>whose... is set to TRUE（關係子句）： 修飾 Robot</p>
+<p>語法重點： whose 引導所有格關係子句</p>
+<p><strong>3.請摘要出下列內容:</strong></p>
+<p><strong>What is Webots?</strong><br/>Webots is a professional mobile robot simulation software that provides a rapid prototyping environment. It allows users to create 3D virtual worlds with physics properties (e.g., mass, joints, friction) and add passive or active objects like mobile robots. Users can equip robots with sensors and actuators and program them for desired behaviors. It offers numerous robot models, examples, and interfaces to transfer simulations to real robots like e-puck or Nao.</p>
+<p><strong>What can I do with Webots?</strong><br/>Webots is ideal for research and education in mobile robotics, supporting projects like robot prototyping (e.g., academic, automotive, toy industries), locomotion research (legged, humanoid robots), multi-agent studies (swarm intelligence, collaborative robots), and adaptive behavior research (genetic algorithms, AI). It’s also used for teaching robotics and robot competitions.</p>
+<p><strong>What do I need to know to use Webots?</strong><br/>Basic knowledge of C, C++, Java, Python, or MATLAB is required to program controllers, though beginners can use the graphical BotStudio language for certain robots (e.g., e-puck). To create custom models or environments, familiarity with 3D graphics and VRML97 is needed for designing or importing 3D objects.</p>
+<p><strong>How do I get User Support?</strong><br/>Cyberbotics offers paid support via Premier Service plans and custom development. Community-based support is available through Robotics StackExchange (webots tag), GitHub Discussions (development questions), GitHub Issues (bug reports), and Discord (quick discussions), though responses aren’t guaranteed.</p>
+<p><strong>Webots Simulation</strong><br/>A Webots simulation consists of a world file (.wbt) defining robots and their environment, controller programs (in C/C++/Java/Python/MATLAB), and an optional physics plugin (in C/C++) to adjust physics behavior. World files may rely on external PROTO files and textures.</p>
+<p><strong>What is a World?</strong><br/>A "world" in Webots is a 3D description of robots and their environment, detailing properties like position, geometry, appearance, and physics. Organized hierarchically (like VRML97), world files (.wbt) specify controller names but don’t include the controller code itself.</p>
+<p><strong>What is a Controller?</strong><br/>A controller is a program that directs a robot in a world file, written in C, C++, Java, Python, or MATLAB. Webots launches each controller as a separate process per robot at simulation start. Some languages require compilation (e.g., C/C++), others interpretation (e.g., Python), with files stored in the "controllers" subdirectory.</p>
+<p><strong>What is a Supervisor Controller?</strong><br/>A supervisor controller, tied to a robot with its "supervisor" field set to TRUE, can perform privileged actions (e.g., simulation control, moving robots, recording videos) typically reserved for human operators. Written in any supported language, it has greater capabilities than standard controllers.</p>
+<p>4.請列出上述文章中的重要的英文單字與解釋, 以及出現在文句中的用法:</p>
+<p><br/><strong data-end="162" data-start="148">simulation</strong> <em data-end="169" data-start="163">(n.)</em></p>
+<ul data-end="326" data-start="172">
+<li class="" data-end="186" data-start="172">
+<p class="" data-end="186" data-start="174"><strong data-end="181" data-start="174">中文：</strong> 模擬</p>
+</li>
+<li class="" data-end="270" data-start="187">
+<p class="" data-end="270" data-start="189"><strong data-end="197" data-start="189">原文句：</strong> <em data-end="268" data-start="198">"Webots is a professional mobile robot simulation software package."</em></p>
+</li>
+<li class="" data-end="326" data-start="271">
+<p class="" data-end="326" data-start="273"><strong data-end="280" data-start="273">用法：</strong> 作為名詞使用，修飾 <strong data-end="311" data-start="291">software package</strong>，整體意思是「模擬軟體套件」。</p>
+</li>
+</ul>
+<p><br/>2. <strong data-end="367" data-start="340">prototype / prototyping</strong> <em data-end="382" data-start="368">(n./v./adj.)</em></p>
+<ul data-end="535" data-start="385">
+<li class="" data-end="403" data-start="385">
+<p class="" data-end="403" data-start="387"><strong data-end="394" data-start="387">中文：</strong> 原型／做原型</p>
+</li>
+<li class="" data-end="465" data-start="404">
+<p class="" data-end="465" data-start="406"><strong data-end="414" data-start="406">原文句：</strong> <em data-end="463" data-start="415">"It offers a rapid prototyping environment..."</em></p>
+</li>
+<li class="" data-end="535" data-start="466">
+<p class="" data-end="535" data-start="468"><strong data-end="475" data-start="468">用法：</strong> <strong data-end="491" data-start="476">prototyping</strong> 是動名詞，做為形容詞修飾 <strong data-end="520" data-start="505">environment</strong>，表「能快速製作原型的環境」。</p>
+</li>
+</ul>
+<p><br/>3. <strong data-end="564" data-start="549">environment</strong> <em data-end="571" data-start="565">(n.)</em></p>
+<ul data-end="768" data-start="574">
+<li class="" data-end="588" data-start="574">
+<p class="" data-end="588" data-start="576"><strong data-end="583" data-start="576">中文：</strong> 環境</p>
+</li>
+<li class="" data-end="684" data-start="589">
+<p class="" data-end="684" data-start="591"><strong data-end="599" data-start="591">原文句：</strong> <em data-end="682" data-start="600">"...that allows the user to create 3D virtual worlds with physics properties..."</em></p>
+</li>
+<li class="" data-end="768" data-start="685">
+<p class="" data-end="768" data-start="687"><strong data-end="694" data-start="687">用法：</strong> 與形容詞 <strong data-end="721" data-start="700">rapid prototyping</strong> 搭配，構成名詞片語 <strong data-end="767" data-start="732">a rapid prototyping environment</strong>。</p>
+</li>
+</ul>
+<p><br/>4. <strong data-end="804" data-start="782">physics properties</strong> <em data-end="814" data-start="805">(n. 複數)</em></p>
+<ul data-end="984" data-start="817">
+<li class="" data-end="833" data-start="817">
+<p class="" data-end="833" data-start="819"><strong data-end="826" data-start="819">中文：</strong> 物理屬性</p>
+</li>
+<li class="" data-end="924" data-start="834">
+<p class="" data-end="924" data-start="836"><strong data-end="844" data-start="836">原文句：</strong> <em data-end="922" data-start="845">"...with physics properties such as mass, joints, friction coefficients..."</em></p>
+</li>
+<li class="" data-end="984" data-start="925">
+<p class="" data-end="984" data-start="927"><strong data-end="934" data-start="927">用法：</strong> <strong data-end="943" data-start="935">with</strong> 引導的介系詞片語，修飾 <strong data-end="966" data-start="956">worlds</strong>；<strong data-end="978" data-start="967">such as</strong> 引導舉例。</p>
+</li>
+</ul>
+<p><br/>5. <strong data-end="1012" data-start="998">locomotion</strong> <em data-end="1019" data-start="1013">(n.)</em></p>
+<ul data-end="1153" data-start="1022">
+<li class="" data-end="1041" data-start="1022">
+<p class="" data-end="1041" data-start="1024"><strong data-end="1031" data-start="1024">中文：</strong> 移動、運動方式</p>
+</li>
+<li class="" data-end="1112" data-start="1042">
+<p class="" data-end="1112" data-start="1044"><strong data-end="1052" data-start="1044">原文句：</strong> <em data-end="1110" data-start="1053">"These robots can have different locomotion schemes..."</em></p>
+</li>
+<li class="" data-end="1153" data-start="1113">
+<p class="" data-end="1153" data-start="1115"><strong data-end="1122" data-start="1115">用法：</strong> 作為名詞，與 <strong data-end="1141" data-start="1130">schemes</strong> 結合表示「移動方案」。</p>
+</li>
+</ul>
+<p><br/>6. <strong data-end="1188" data-start="1167">sensor / actuator</strong> <em data-end="1195" data-start="1189">(n.)</em></p>
+<ul data-end="1341" data-start="1198">
+<li class="" data-end="1219" data-start="1198">
+<p class="" data-end="1219" data-start="1200"><strong data-end="1207" data-start="1200">中文：</strong> 感測器 / 執行器</p>
+</li>
+<li class="" data-end="1296" data-start="1220">
+<p class="" data-end="1296" data-start="1222"><strong data-end="1230" data-start="1222">原文句：</strong> <em data-end="1294" data-start="1231">"...equipped with a number of sensor and actuator devices..."</em></p>
+</li>
+<li class="" data-end="1341" data-start="1297">
+<p class="" data-end="1341" data-start="1299"><strong data-end="1306" data-start="1299">用法：</strong> 被動語態 <strong data-end="1332" data-start="1312">be equipped with</strong>，後面接複數名詞。</p>
+</li>
+</ul>
+<p><br/>7. <strong data-end="1369" data-start="1355">controller</strong> <em data-end="1376" data-start="1370">(n.)</em></p>
+<ul data-end="1550" data-start="1379">
+<li class="" data-end="1399" data-start="1379">
+<p class="" data-end="1399" data-start="1381"><strong data-end="1388" data-start="1381">中文：</strong> 控制器，控制程式</p>
+</li>
+<li class="" data-end="1498" data-start="1400">
+<p class="" data-end="1498" data-start="1402"><strong data-end="1410" data-start="1402">原文句：</strong> <em data-end="1496" data-start="1411">"Webots contains a large number of robot models and controller program examples..."</em></p>
+</li>
+<li class="" data-end="1550" data-start="1499">
+<p class="" data-end="1550" data-start="1501"><strong data-end="1508" data-start="1501">用法：</strong> 作名詞，修飾 <strong data-end="1536" data-start="1516">program examples</strong>，代表用來控制機器人的程式。</p>
+</li>
+</ul>
+<p><br/>8. <strong data-end="1577" data-start="1564">interface</strong> <em data-end="1584" data-start="1578">(n.)</em></p>
+<ul data-end="1740" data-start="1587">
+<li class="" data-end="1604" data-start="1587">
+<p class="" data-end="1604" data-start="1589"><strong data-end="1596" data-start="1589">中文：</strong> 接口，介面</p>
+</li>
+<li class="" data-end="1690" data-start="1605">
+<p class="" data-end="1690" data-start="1607"><strong data-end="1615" data-start="1607">原文句：</strong> <em data-end="1688" data-start="1616">"Webots also contains a number of interfaces to real mobile robots..."</em></p>
+</li>
+<li class="" data-end="1740" data-start="1691">
+<p class="" data-end="1740" data-start="1693"><strong data-end="1700" data-start="1693">用法：</strong> <strong data-end="1714" data-start="1701">interface</strong> 與 <strong data-end="1723" data-start="1717">to</strong> 搭配表示「連接至...的介面」。</p>
+</li>
+</ul>
+<p><br/>9. <strong data-end="1762" data-start="1754">real</strong> <em data-end="1771" data-start="1763">(adj.)</em></p>
+<ul data-end="1915" data-start="1774">
+<li class="" data-end="1789" data-start="1774">
+<p class="" data-end="1789" data-start="1776"><strong data-end="1783" data-start="1776">中文：</strong> 真實的</p>
+</li>
+<li class="" data-end="1877" data-start="1790">
+<p class="" data-end="1877" data-start="1792"><strong data-end="1800" data-start="1792">原文句：</strong> <em data-end="1875" data-start="1801">"...you can transfer its control program to a real robot like e-puck..."</em></p>
+</li>
+<li class="" data-end="1915" data-start="1878">
+<p class="" data-end="1915" data-start="1880"><strong data-end="1887" data-start="1880">用法：</strong> 修飾 <strong data-end="1900" data-start="1891">robot</strong>，表示與模擬相對的真實機器人。</p>
+</li>
+</ul>
+<p><br/>10. <strong data-end="1942" data-start="1930">adaptive</strong> <em data-end="1951" data-start="1943">(adj.)</em></p>
+<ul data-end="2096" data-start="1954">
+<li class="" data-end="1970" data-start="1954">
+<p class="" data-end="1970" data-start="1956"><strong data-end="1963" data-start="1956">中文：</strong> 適應性的</p>
+</li>
+<li class="" data-end="2054" data-start="1971">
+<p class="" data-end="2054" data-start="1973"><strong data-end="1981" data-start="1973">原文句：</strong> <em data-end="2052" data-start="1982">"Adaptive behavior research (genetic algorithm, neural networks...)"</em></p>
+</li>
+<li class="" data-end="2096" data-start="2055">
+<p class="" data-end="2096" data-start="2057"><strong data-end="2064" data-start="2057">用法：</strong> 修飾名詞 <strong data-end="2082" data-start="2070">behavior</strong>，表示可根據環境調整的行為。</p>
+</li>
+</ul>
+<p><br/>11. <strong data-end="2145" data-start="2111">graphical programming language</strong> <em data-end="2159" data-start="2146">(n. phrase)</em></p>
+<ul data-end="2328" data-start="2162">
+<li class="" data-end="2181" data-start="2162">
+<p class="" data-end="2181" data-start="2164"><strong data-end="2171" data-start="2164">中文：</strong> 圖形化程式語言</p>
+</li>
+<li class="" data-end="2265" data-start="2182">
+<p class="" data-end="2265" data-start="2184"><strong data-end="2192" data-start="2184">原文句：</strong> <em data-end="2263" data-start="2193">"...using a simple graphical programming language called BotStudio."</em></p>
+</li>
+<li class="" data-end="2328" data-start="2266">
+<p class="" data-end="2328" data-start="2268"><strong data-end="2275" data-start="2268">用法：</strong> <strong data-end="2289" data-start="2276">graphical</strong> 修飾 <strong data-end="2317" data-start="2293">programming language</strong>，整體是複合名詞片語。</p>
+</li>
+</ul>
+<p><br/>12. <strong data-end="2354" data-start="2343">support</strong> <em data-end="2364" data-start="2355">(n./v.)</em></p>
+<ul data-end="2495" data-start="2367">
+<li class="" data-end="2386" data-start="2367">
+<p class="" data-end="2386" data-start="2369"><strong data-end="2376" data-start="2369">中文：</strong> 支援、技術協助</p>
+</li>
+<li class="" data-end="2445" data-start="2387">
+<p class="" data-end="2445" data-start="2389"><strong data-end="2397" data-start="2389">原文句：</strong> <em data-end="2443" data-start="2398">"Cyberbotics provides paid user support..."</em></p>
+</li>
+<li class="" data-end="2495" data-start="2446">
+<p class="" data-end="2495" data-start="2448"><strong data-end="2455" data-start="2448">用法：</strong> 作為名詞與 <strong data-end="2470" data-start="2462">user</strong> 組成名詞片語 <strong data-end="2494" data-start="2478">user support</strong>。</p>
+</li>
+</ul>
+<p><br/>13. <strong data-end="2532" data-start="2510">issue / discussion</strong> <em data-end="2539" data-start="2533">(n.)</em></p>
+<ul data-end="2681" data-start="2542">
+<li class="" data-end="2559" data-start="2542">
+<p class="" data-end="2559" data-start="2544"><strong data-end="2551" data-start="2544">中文：</strong> 問題／討論</p>
+</li>
+<li class="" data-end="2628" data-start="2560">
+<p class="" data-end="2628" data-start="2562"><strong data-end="2570" data-start="2562">原文句：</strong> <em data-end="2626" data-start="2571">"GitHub Issues should be used only to report bugs..."</em></p>
+</li>
+<li class="" data-end="2681" data-start="2629">
+<p class="" data-end="2681" data-start="2631"><strong data-end="2638" data-start="2631">用法：</strong> 特指 GitHub 平台的回報問題區（Issue）與討論區（Discussion）。</p>
+</li>
+</ul>
+<p><br/>14. <strong data-end="2707" data-start="2696">texture</strong> <em data-end="2714" data-start="2708">(n.)</em></p>
+<ul data-end="2838" data-start="2717">
+<li class="" data-end="2734" data-start="2717">
+<p class="" data-end="2734" data-start="2719"><strong data-end="2726" data-start="2719">中文：</strong> 貼圖，材質</p>
+</li>
+<li class="" data-end="2809" data-start="2735">
+<p class="" data-end="2809" data-start="2737"><strong data-end="2745" data-start="2737">原文句：</strong> <em data-end="2807" data-start="2746">"...depends on external PROTO files (.proto) and textures."</em></p>
+</li>
+<li class="" data-end="2838" data-start="2810">
+<p class="" data-end="2838" data-start="2812"><strong data-end="2819" data-start="2812">用法：</strong> 作名詞，作為模擬世界的視覺元素之一。</p>
+</li>
+</ul>
+<p><br/>15. <strong data-end="2869" data-start="2853">hierarchical</strong> <em data-end="2878" data-start="2870">(adj.)</em></p>
+<ul data-end="3008" data-start="2881">
+<li class="" data-end="2897" data-start="2881">
+<p class="" data-end="2897" data-start="2883"><strong data-end="2890" data-start="2883">中文：</strong> 階層式的</p>
+</li>
+<li class="" data-end="2965" data-start="2898">
+<p class="" data-end="2965" data-start="2900"><strong data-end="2908" data-start="2900">原文句：</strong> <em data-end="2963" data-start="2909">"Worlds are organized as hierarchical structures..."</em></p>
+</li>
+<li class="" data-end="3008" data-start="2966">
+<p class="" data-end="3008" data-start="2968"><strong data-end="2975" data-start="2968">用法：</strong> 修飾名詞 <strong data-end="2995" data-start="2981">structures</strong>，描述世界的資料組織方式。</p>
+</li>
+</ul>
+<p><br/>16. <strong data-end="3037" data-start="3023">supervisor</strong> <em data-end="3049" data-start="3038">(n./adj.)</em></p>
+<ul data-end="3219" data-start="3052">
+<li class="" data-end="3074" data-start="3052">
+<p class="" data-end="3074" data-start="3054"><strong data-end="3061" data-start="3054">中文：</strong> 監督者 / 監督用的</p>
+</li>
+<li class="" data-end="3187" data-start="3075">
+<p class="" data-end="3187" data-start="3077"><strong data-end="3085" data-start="3077">原文句：</strong> <em data-end="3185" data-start="3086">"The Supervisor controller is the controller of a Robot whose supervisor field is set to TRUE..."</em></p>
+</li>
+<li class="" data-end="3219" data-start="3188">
+<p class="" data-end="3219" data-start="3190"><strong data-end="3197" data-start="3190">用法：</strong> 作為名詞與形容詞，描述有特殊權限的控制器。</p>
+</li>
+</ul>
+<p><br/>17. <strong data-end="3248" data-start="3234">privileged</strong> <em data-end="3257" data-start="3249">(adj.)</em></p>
+<ul data-end="3387" data-start="3260">
+<li class="" data-end="3275" data-start="3260">
+<p class="" data-end="3275" data-start="3262"><strong data-end="3269" data-start="3262">中文：</strong> 特權的</p>
+</li>
+<li class="" data-end="3328" data-start="3276">
+<p class="" data-end="3328" data-start="3278"><strong data-end="3286" data-start="3278">原文句：</strong> <em data-end="3326" data-start="3287">"...access to privileged operations."</em></p>
+</li>
+<li class="" data-end="3387" data-start="3329">
+<p class="" data-end="3387" data-start="3331"><strong data-end="3338" data-start="3331">用法：</strong> <strong data-end="3353" data-start="3339">privileged</strong> 修飾 <strong data-end="3371" data-start="3357">operations</strong>，表示不是普通控制器能做的動作。</p>
+</li>
+</ul>
+<p><br/>18. <strong data-end="3425" data-start="3402">compile / interpret</strong> <em data-end="3432" data-start="3426">(v.)</em></p>
+<ul data-end="3594" data-start="3435">
+<li class="" data-end="3454" data-start="3435">
+<p class="" data-end="3454" data-start="3437"><strong data-end="3444" data-start="3437">中文：</strong> 編譯 / 解譯</p>
+</li>
+<li class="" data-end="3543" data-start="3455">
+<p class="" data-end="3543" data-start="3457"><strong data-end="3465" data-start="3457">原文句：</strong> <em data-end="3541" data-start="3466">"Some programming languages need to be compiled... others interpreted..."</em></p>
+</li>
+<li class="" data-end="3594" data-start="3544">
+<p class="" data-end="3594" data-start="3546"><strong data-end="3553" data-start="3546">用法：</strong> 被動語態，<strong data-end="3580" data-start="3559">need to be + 過去分詞</strong> 表示語言需要被處理的方式。</p>
+</li>
+</ul>
+<p><br/>19. <strong data-end="3619" data-start="3609">launch</strong> <em data-end="3626" data-start="3620">(v.)</em></p>
+<ul data-end="3747" data-start="3629">
+<li class="" data-end="3646" data-start="3629">
+<p class="" data-end="3646" data-start="3631"><strong data-end="3638" data-start="3631">中文：</strong> 啟動、執行</p>
+</li>
+<li class="" data-end="3708" data-start="3647">
+<p class="" data-end="3708" data-start="3649"><strong data-end="3657" data-start="3649">原文句：</strong> <em data-end="3706" data-start="3658">"Webots launches the specified controllers..."</em></p>
+</li>
+<li class="" data-end="3747" data-start="3709">
+<p class="" data-end="3747" data-start="3711"><strong data-end="3718" data-start="3711">用法：</strong> 簡單現在式，主詞為 Webots，動詞為 launch。</p>
+</li>
+</ul>
+<p><br/>20. <strong data-end="3773" data-start="3762">process</strong> <em data-end="3780" data-start="3774">(n.)</em></p>
+<ul data-end="3906" data-start="3783">
+<li class="" data-end="3805" data-start="3783">
+<p class="" data-end="3805" data-start="3785"><strong data-end="3792" data-start="3785">中文：</strong> 程序（程式執行實體）</p>
+</li>
+<li class="" data-end="3855" data-start="3806">
+<p class="" data-end="3855" data-start="3808"><strong data-end="3816" data-start="3808">原文句：</strong> <em data-end="3853" data-start="3817">"...each as a separate process..."</em></p>
+</li>
+<li class="" data-end="3906" data-start="3856">
+<p class="" data-end="3906" data-start="3858"><strong data-end="3865" data-start="3858">用法：</strong> <strong data-end="3872" data-start="3866">as</strong> 表示「作為」，與 <strong data-end="3893" data-start="3882">process</strong> 結合說明程式如何被執行。</p>
+</li>
+</ul><h2>task6</h2>
 <p></p>
 <h1>Homework</h1>
 <p>作業 (30%)</p>
