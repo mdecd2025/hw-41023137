@@ -183,6 +183,7 @@ int main(int argc, char **argv) {
 <h4><span><span>什麼是主管控制器？</span></span></h4>
 <p><span><span>主管控制器是主管欄位設定為 TRUE 的機器人的控制器，它可以執行通常只能由人類操作員而不能由真實機器人執行的操作。</span></span></p>
 <p><span><span>Supervisor 控制器可以用上述任何一種程式語言編寫。然而，與常規機器人控制器不同的是，Supervisor 控制器可以存取特權操作。特權操作包括模擬控制，例如將機器人移動到隨機位置、對模擬進行視訊擷取等。</span></span></p>
+<p><span><span></span></span></p>
 <p><strong>2.請整理 <a href="https://cyberbotics.com/doc/guide/introduction-to-webots">https://cyberbotics.com/doc/guide/introduction-to-webots</a> 中重要的英文單字與用法, 並且針對其中所使用的英文文法逐句說明.</strong></p>
 <p><b>英文單字：</b></p>
 <table>
@@ -338,6 +339,7 @@ int main(int argc, char **argv) {
 </tr>
 </tbody>
 </table>
+<p></p>
 <p><strong>文法說明：</strong></p>
 <p>第一段：What is Webots?<br/>Webots is a professional mobile robot simulation software package.<br/>主詞： Webots</p>
 <p>be 動詞： is</p>
@@ -371,6 +373,7 @@ int main(int argc, char **argv) {
 <p>of a Robot（介系詞片語）</p>
 <p>whose... is set to TRUE（關係子句）： 修飾 Robot</p>
 <p>語法重點： whose 引導所有格關係子句</p>
+<p></p>
 <p><strong>3.請摘要出下列內容:</strong></p>
 <p><strong>What is Webots?</strong><br/>Webots is a professional mobile robot simulation software that provides a rapid prototyping environment. It allows users to create 3D virtual worlds with physics properties (e.g., mass, joints, friction) and add passive or active objects like mobile robots. Users can equip robots with sensors and actuators and program them for desired behaviors. It offers numerous robot models, examples, and interfaces to transfer simulations to real robots like e-puck or Nao.</p>
 <p><strong>What can I do with Webots?</strong><br/>Webots is ideal for research and education in mobile robotics, supporting projects like robot prototyping (e.g., academic, automotive, toy industries), locomotion research (legged, humanoid robots), multi-agent studies (swarm intelligence, collaborative robots), and adaptive behavior research (genetic algorithms, AI). It’s also used for teaching robotics and robot competitions.</p>
@@ -380,7 +383,8 @@ int main(int argc, char **argv) {
 <p><strong>What is a World?</strong><br/>A "world" in Webots is a 3D description of robots and their environment, detailing properties like position, geometry, appearance, and physics. Organized hierarchically (like VRML97), world files (.wbt) specify controller names but don’t include the controller code itself.</p>
 <p><strong>What is a Controller?</strong><br/>A controller is a program that directs a robot in a world file, written in C, C++, Java, Python, or MATLAB. Webots launches each controller as a separate process per robot at simulation start. Some languages require compilation (e.g., C/C++), others interpretation (e.g., Python), with files stored in the "controllers" subdirectory.</p>
 <p><strong>What is a Supervisor Controller?</strong><br/>A supervisor controller, tied to a robot with its "supervisor" field set to TRUE, can perform privileged actions (e.g., simulation control, moving robots, recording videos) typically reserved for human operators. Written in any supported language, it has greater capabilities than standard controllers.</p>
-<p>4.請列出上述文章中的重要的英文單字與解釋, 以及出現在文句中的用法:</p>
+<p></p>
+<p><strong>4.請列出上述文章中的重要的英文單字與解釋, 以及出現在文句中的用法:</strong></p>
 <p><br/><strong data-end="162" data-start="148">simulation</strong> <em data-end="169" data-start="163">(n.)</em></p>
 <ul data-end="326" data-start="172">
 <li class="" data-end="186" data-start="172">
@@ -609,7 +613,8 @@ int main(int argc, char **argv) {
 <p class="" data-end="3747" data-start="3711"><strong data-end="3718" data-start="3711">用法：</strong> 簡單現在式，主詞為 Webots，動詞為 launch。</p>
 </li>
 </ul>
-<p><br/>20. <strong data-end="3773" data-start="3762">process</strong> <em data-end="3780" data-start="3774">(n.)</em></p>
+<p></p>
+<p>20. <strong data-end="3773" data-start="3762">process</strong> <em data-end="3780" data-start="3774">(n.)</em></p>
 <ul data-end="3906" data-start="3783">
 <li class="" data-end="3805" data-start="3783">
 <p class="" data-end="3805" data-start="3785"><strong data-end="3792" data-start="3785">中文：</strong> 程序（程式執行實體）</p>
@@ -620,7 +625,98 @@ int main(int argc, char **argv) {
 <li class="" data-end="3906" data-start="3856">
 <p class="" data-end="3906" data-start="3858"><strong data-end="3865" data-start="3858">用法：</strong> <strong data-end="3872" data-start="3866">as</strong> 表示「作為」，與 <strong data-end="3893" data-start="3882">process</strong> 結合說明程式如何被執行。</p>
 </li>
-</ul><h2>task6</h2>
+</ul>
+<p></p>
+<p><strong>5.請詳細說明如何採手動方式在 Webots 建立下列場景:</strong></p>
+<p><br/>步驟一：啟動 Webots 並建立新的專案<br/>打開 Webots。</p>
+<p>點選上方選單：<br/>File → New Project Directory...<br/>輸入資料夾名稱，按下「Create」。</p>
+<p>接著會跳出建立場景的選項，選擇 Empty World → 點選「Finish」。</p>
+<p>步驟二：建立世界元素（地板、物體、機器人等）<br/>➤ 建立地板（Ground / Floor）<br/>在左側 "Scene Tree"（場景樹） 視窗中，選取 root。</p>
+<p>右鍵 → Add new node...<br/>選擇 Solid → OK。</p>
+<p>在 Solid 節點下，再加入：</p>
+<p>Shape（幾何外型）</p>
+<p>Appearance → Material（材質）</p>
+<p>Box（地板的形狀）</p>
+<p>設定屬性如下（右側選單）：</p>
+<p>size: 10 10 0.1（寬、長、高）</p>
+<p>translation: 0 0 0.05</p>
+<p>小技巧：你也可以使用 Floor 節點，它是預設的地面。</p>
+<p>➤ 加入障礙物（例如牆壁、箱子）<br/>點 root → 右鍵 → Add new node... → 選擇 Solid。</p>
+<p>在其中加入：</p>
+<p>Shape → Box</p>
+<p>Appearance（可加材質）</p>
+<p>設定：</p>
+<p>size: 0.5 0.5 0.5（障礙物大小）</p>
+<p>translation: 1 1 0.25（位在地面上的座標）</p>
+<p>➤ 加入機器人（e-puck）<br/>點 root → 右鍵 → Add new node...</p>
+<p>搜尋並加入：E-puck（Webots 內建機器人）</p>
+<p>設定位置：</p>
+<p>translation: -1 0 0.035（剛好放在地上）</p>
+<p>步驟三：加入感測器或照明（選擇性）<br/>➤ 加入光源（Light）<br/>點選 root → Add new node... → 選擇 PointLight 或 DirectionalLight</p>
+<p>設定位置與亮度，例如：</p>
+<p>translation: 0 0 5（上方照射）</p>
+<p>color: 1 1 1（白光）</p>
+<p>➤ 加入相機（Camera）<br/>如果你想讓機器人視角觀看世界：</p>
+<p>點選機器人（例如 E-puck）節點。</p>
+<p>右鍵 → Add new node... → 選擇 Camera</p>
+<p>設定解析度與啟用時間：</p>
+<p>width: 640</p>
+<p>height: 480</p>
+<p>在控制器中啟用 camera（見程式控制方式）</p>
+<p>步驟四：儲存與執行<br/>點選上方選單 File → Save World As...<br/>存成 .wbt 檔案，放在 worlds 資料夾中。</p>
+<p>點擊播放按鈕 ▶️ 開始模擬！</p>
+<p>延伸：讓機器人移動（選擇性）<br/>如果你想測試機器人移動，可加入控制程式：</p>
+<p>點選機器人節點 → 設定 controller 欄位（例如選 e-puck_line_following）。</p>
+<p>或者自己寫一個簡單 Python 程式，放在 controllers 資料夾中。</p>
+<p></p>
+<p><strong>6.希望可以手把手一步步說明該如何利用圖形介面 menu 建立這個場景, 過程中有那些要點必須特別注意?</strong></p>
+<p>一、建立新的模擬專案與場景<br/>步驟 1：開啟 Webots → 新建專案<br/>開啟 Webots。</p>
+<p>點選上方選單：<br/>File → New Project Directory...</p>
+<p>輸入新專案資料夾名稱，例如 my_scene → 點「Create」。</p>
+<p>選擇：<br/>Empty world（空白場景）→ 點「Finish」。</p>
+<p>你現在會進入一個空白場景，只有地面與天空。</p>
+<p>二、加入地板（Floor）<br/>步驟 2：加入地板（Box 形式）<br/>在左邊的 Scene Tree（場景樹）中，右鍵點擊 root → 選擇：<br/>Add New Node...</p>
+<p>搜尋並選擇：Solid → 點「Add」</p>
+<p>選中剛剛新增的 Solid，右鍵 →<br/>Add New &gt; Shape</p>
+<p>在 Shape 底下右鍵 →<br/>Add New &gt; Box</p>
+<p>再對 Shape 右鍵 →<br/>Add New &gt; Appearance → Material</p>
+<p>重點設定（右側「Field」欄位設定）：</p>
+<p>在 Box 的 size 欄位填入：10 10 0.1</p>
+<p>在 Solid 的 translation 欄位填入：0 0 0.05</p>
+<p>說明：</p>
+<p>地板厚度是 0.1，所以 y 軸（高度）要設定 0.05 讓它貼齊地面。</p>
+<p>這樣你就建立了一個10x10的「平面地板」。</p>
+<p>三、加入障礙物（例如箱子或牆壁）<br/>步驟 3：新增障礙物<br/>對 root 右鍵 →<br/>Add New Node... → 選 Solid</p>
+<p>在此 Solid 裡一樣新增：</p>
+<p>Shape → Box</p>
+<p>Appearance → Material</p>
+<p>設定數值如下：</p>
+<p>Box &gt; size: 0.5 0.5 0.5</p>
+<p>Solid &gt; translation: 1 1 0.25</p>
+<p>說明：</p>
+<p>高度為 0.5 → 要設在 y 軸 0.25 才能「站在地上」</p>
+<p>四、加入機器人（E-puck）<br/>步驟 4：加入 e-puck 機器人<br/>對 root 右鍵 →<br/>Add New Node...</p>
+<p>搜尋並選擇：E-puck → 點「Add」</p>
+<p>設定位置：</p>
+<p>在右側欄位中，找到 translation → 設定為：-1 0 0.035</p>
+<p>說明：</p>
+<p>e-puck 機器人本身高度是 0.07 左右，因此高度設為一半 0.035 會剛好落在地板上。</p>
+<p>五、加入光源（DirectionalLight）<br/>步驟 5：讓場景更亮<br/>對 root 右鍵 →<br/>Add New Node...</p>
+<p>搜尋：DirectionalLight → 點「Add」</p>
+<p>設定建議：</p>
+<p>direction: -1 -1 -1（斜向照下來）</p>
+<p>color: 1 1 1（白色光）</p>
+<p>intensity: 2（亮一點）</p>
+<p>六、加入攝影機（選擇性）<br/>步驟 6：把相機加在 e-puck 上<br/>點開 E-puck → 找到其 children 節點 → 右鍵 →<br/>Add New Node...</p>
+<p>選擇：Camera → 點「Add」</p>
+<p>建議設定：</p>
+<p>width: 640</p>
+<p>height: 480</p>
+<p>translation: 0 0 0.05（放在機器人頭上）</p>
+<p>七、儲存並執行模擬<br/>步驟 7：儲存場景<br/>點選上方選單：<br/>File → Save World As...</p>
+<p>命名檔案，例如 basic_scene.wbt → 儲存到 worlds/ 資料夾</p>
+<p>步驟 8：執行模擬<br/>點選工具列上方的「播放」按鈕 ▶️</p>
+<p>機器人會初始化（雖然還沒動，除非你加控制器）</p><h2>task6</h2>
 <p></p>
 <h1>Homework</h1>
 <p>作業 (30%)</p>
