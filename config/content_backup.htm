@@ -840,8 +840,15 @@ int main(int argc, char **argv) {
 <p><span>心得：Exam2整體上要比Exam1要簡單一點，主要是多了在前面要先用繪圖軟體建立組合件並用程式分割成obj零件檔，在進入Webots後要設定的東西就比Exam1要來得少很多，因為已經先利用cad檔定義完所有零件的尺寸和各零件之間的相對位置，因此只需要設定joint位置並將圖檔匯入即可。這次我了解到之前在hw2製作過程中所遇到的問題原因，那時我找不到老師給的obj分割程式，所以自己叫AI寫了一個，但不知道為甚麼一直無法順利完成模擬。後來去詢問了老師之後，才了解到原來這個分割程式會將切割出來的obj檔案縮小100倍，原因是因為匯出成stl之後的檔案是沒有單位的，obj當然也是，而我們solvespace所匯出的stl檔預設單位是使用毫米，假設我們畫了一個40毫米的連桿匯出的stl就是40無單位，而webots所使用的單位是米，如果檔案就這樣不轉換直接匯進去就會變成40米，所以縮小100倍之後就可以變成題目所要求的0.4米的連桿，因此老師才這樣設計這個切割程式。</span></p>
 <p><span>檔案：</span><a href="/downloads/Exam2.7z">Exam2.7z</a></p><h2>Exam3</h2>
 <p>Exam3 (20%): Webots 機電模擬場景的協同設計</p>
-<p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam3 - 學員學號</p>
-<h1>Final</h1>
+<p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam3-1 - 41023137</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/RS56SAwR7tE" width="560"></iframe></p>
+<p>心得：一開始測試的時候想說怎麼跑不出來，後來發現是因為我忘記要用<span>webotsw --stream去開webots，</span></p>
+<p><span>而是使用原本的webotsw開啟，所以才會跑不出來。</span></p>
+<p><span><a href="/downloads/hw1.7z">hw1.7z</a></span></p>
+<p><span>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam3-1 - 41023137</span></p>
+<p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ZshIwQAz8sk" width="560"></iframe></span></p>
+<p><span>心得：整體操作下來與上一個的做法差不多，不過這次多了將檔案中的數字修改為學號這一步驟。</span></p>
+<p><span><a href="/downloads/three_digit_counter.7z">three_digit_counter.7z</a></span></p><h1>Final</h1>
 <p><span>期末協同專案執行過程影片、簡報與 PDf 報告檔案 (六人一組) (30%)</span></p>
 <p><span>題目: <span style="background-color: #ccffcc;">Webots 動態投籃模擬系統的協同設計</span></span></p>
 <p><span>說明: </span></p>
