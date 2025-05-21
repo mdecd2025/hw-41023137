@@ -838,7 +838,7 @@ int main(int argc, char **argv) {
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam2 - 41023137</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/xPs8212xZmQ" width="560"></iframe></p>
 <p><span>心得：Exam2整體上要比Exam1要簡單一點，主要是多了在前面要先用繪圖軟體建立組合件並用程式分割成obj零件檔，在進入Webots後要設定的東西就比Exam1要來得少很多，因為已經先利用cad檔定義完所有零件的尺寸和各零件之間的相對位置，因此只需要設定joint位置並將圖檔匯入即可。這次我了解到之前在hw2製作過程中所遇到的問題原因，那時我找不到老師給的obj分割程式，所以自己叫AI寫了一個，但不知道為甚麼一直無法順利完成模擬。後來去詢問了老師之後，才了解到原來這個分割程式會將切割出來的obj檔案縮小100倍，原因是因為匯出成stl之後的檔案是沒有單位的，obj當然也是，而我們solvespace所匯出的stl檔預設單位是使用毫米，假設我們畫了一個40毫米的連桿匯出的stl就是40無單位，而webots所使用的單位是米，如果檔案就這樣不轉換直接匯進去就會變成40米，所以縮小100倍之後就可以變成題目所要求的0.4米的連桿，因此老師才這樣設計這個切割程式。</span></p>
-<p><a href="/downloads/Exam2.7z">Exam2.7z</a></p><h2>Exam3</h2>
+<p><span>檔案：</span><a href="/downloads/Exam2.7z">Exam2.7z</a></p><h2>Exam3</h2>
 <p>Exam3 (20%): Webots 機電模擬場景的協同設計</p>
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam3 - 學員學號</p>
 <h1>Final</h1>
