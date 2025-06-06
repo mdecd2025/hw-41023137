@@ -141,7 +141,15 @@ int main(int argc, char **argv) {
 <p><b>w13：完成Exam並填寫Exam表單</b></p>
 <p><b>w14：檢查HW1 Webots Streaming Viewer串流網頁</b></p>
 <p><b>w15：端午節放假</b></p>
-<p><b>w16：檢查作業學習成果</b></p><h1>Tasks</h1>
+<p><b>w16：檢查作業學習成果</b></p>
+<h2>w16</h2>
+<p><strong>w16-1</strong></p>
+<p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/NGL4V-28pPI" width="560"></iframe></span></p>
+<p><span>過程心得：將hw1的link1連桿修改為0.2，除了修改box的長度為0.2之外，link1的pose、link2和link3的rotation角度、joint2的anchor位置也要跟著更改。</span></p>
+<p><strong>w16-2</strong></p>
+<p><strong><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/pLLhG5b-baw" width="560"></iframe></strong></p>
+<p>過程心得：<span>將hw2的link1連桿修改為20，這裡因為hw2組合件的相對位置是在轉stl前就先決定好的，所以要先回到solvespaces修改零件檔，將新的link1與其他零件組合完畢之後再次匯出為stl檔，再透過程式轉為obj，之後進到webots匯入零件檔進行設定，設定好之後只要將各個joint與原點之間的相對座標輸入進去即可，其他部分都由原本匯出的組合圖決定好了。不過這次也有遇到新問題，一開始轉起來都歪歪的，後來知道是因為我原本建立的組合圖base1沒有和原點重合，我學到了匯入webots的圖檔的圓心座標是根據原圖檔的座標定義的，後來考慮到如果修改原圖檔再重新匯出的話，所有節點設定全部都要重新調整，所以決定直接抓原圖檔中各個joint與原點之間的距離來輸入webots，最後也順利的完成了這個任務。</span></p>
+<p><span><a href="/downloads/hw2-1.7z">hw2-1.7z</a></span></p><h1>Tasks</h1>
 <h2>task1</h2>
 <p><strong>w1：建立個人倉儲網頁及分組</strong></p><h3>list</h3>
 <p><a href="https://mdecd2025.github.io/hw-41023137/content/Brython.html?src=https://gist.githubusercontent.com/41023137/fff8d8095437ab9fc4a95d445cf2d251/raw/18c98d31267f38c19bc315b6ae4f9678337ff919/w1_hw_1">學員作業網站與倉儲連結</a></p>
@@ -799,7 +807,7 @@ int main(int argc, char **argv) {
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW2 - 41023137</p>
 <p></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/iIxs_JlhQhw" width="560"></iframe></p>
-<p></p><h2>HW3</h2>
+<p>心得：<span>這次的作業製作過程中我遇到了一些問題，一開始我找不到老師給的obj分割程式，所以自己叫AI寫了一個，但不知道為甚麼一直無法順利完成模擬。後來去詢問了老師之後，才了解到原來這個分割程式會將切割出來的obj檔案縮小100倍，原因是因為匯出成stl之後的檔案是沒有單位的，obj當然也是，而我們solvespace所匯出的stl檔預設單位是使用毫米，假設我們畫了一個40毫米的連桿匯出的stl就是40無單位，而webots所使用的單位是米，如果檔案就這樣不轉換直接匯進去就會變成40米，所以縮小100倍之後就可以變成題目所要求的0.4米的連桿，因此老師才這樣設計這個切割程式。了解了它的原理之後，我就利用老師給的程式順利切割零件並完成了這次的作業。</span></p><h2>HW3</h2>
 <p>HW3 (20%):<span style="background-color: #ffff00;">建立 Webots 桌上籃球遊戲機模擬系統</span></p>
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW3 - 學員學號</p>
 <p></p>
