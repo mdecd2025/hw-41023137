@@ -154,7 +154,7 @@ img.add_border {
 <p><span>心得：整體操作下來與上一個的做法差不多，不過這次多了將檔案中的數字修改為學號這一步驟。</span></p>
 <p><span>檔案：<a href="./../downloads/three_digit_counter.7z">three_digit_counter.7z</a></span></p>
 <p><span>新增將數字更改為完整學號8位數的版本：</span><span><a href="./../downloads/three_digit_counter2.7z">three_digit_counter2.7z</a></span></p>
-<p><span>操作流程：先將pose裡的background shape中的box的x長度修改為3，這樣背景才能裝得下八個數字，然後將third pose複製在下面貼五次，再依序將名稱變更為four~eight，這些pose下面的group也要改成一樣的名字，group下面的shape也要改，假設是four pose，裡面的shape就要依序改成A4~G4，five pose的話就改成A5~G5，以此類推，之後把background的pose的translation位置修改到跟顯示數字的位置一樣，最後將程式碼交由AI改寫成能夠顯示出八位數字的七端顯示器控制程式並存檔即可。</span></p>
+<p><span>操作流程：先將pose裡的background shape中的box的x長度修改為3，這樣背景才能裝得下八個數字，然後將third pose複製在下面貼五次，再依序將名稱變更為four~eight，這些pose下面的group也要改成一樣的名字，group下面的shape也要改，假設是four pose，裡面的shape就要依序改成A4~G4，five pose的話就改成A5~G5，以此類推，之後把background的pose的translation位置修改到跟顯示數字的位置一樣，最後將程式碼交由AI改寫成能夠顯示出八位數字的七段顯示器控制程式並存檔即可。</span></p>
 <p><span>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam3-3 - 41023137</span></p>
 <p><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/HB1PCWqK0bI" width="560"></iframe></span></p>
 <p><span>心得：這個比前面兩個又再更複雜一些，其實要做的步驟很少，先用webots開啟老師給的wbt檔案，再用SciTE把老師給的檔案內的兩個python檔案打開，複製最上面的pip install websocket-client websocket-server keyboard這段程式碼到cmd執行，然後東西載完之後，先用SciTE把兩個檔案內的ipv6改成自己的ipv6裡，存檔然後執行，就可以看到車子在跑並且可以使用鍵盤的上下左右鍵來操控，最後跟前面兩個一樣用Webots Streaming Viewer打開確認即可。這題有一個重要的地方我也是弄了很久才搞定，就是start.bat裡面的python path要改成這樣</span></p>
