@@ -812,9 +812,11 @@ int main(int argc, char **argv) {
 <p>心得：<span>這次的作業製作過程中我遇到了一些問題，一開始我找不到老師給的obj分割程式，所以自己叫AI寫了一個，但不知道為甚麼一直無法順利完成模擬。後來去詢問了老師之後，才了解到原來這個分割程式會將切割出來的obj檔案縮小100倍，原因是因為匯出成stl之後的檔案是沒有單位的，obj當然也是，而我們solvespace所匯出的stl檔預設單位是使用毫米，假設我們畫了一個40毫米的連桿匯出的stl就是40無單位，而webots所使用的單位是米，如果檔案就這樣不轉換直接匯進去就會變成40米，所以縮小100倍之後就可以變成題目所要求的0.4米的連桿，因此老師才這樣設計這個切割程式。了解了它的原理之後，我就利用老師給的程式順利切割零件並完成了這次的作業。</span></p>
 <p><span><a href="/downloads/hw2.7z">hw2.7z</a></span></p><h2>HW3</h2>
 <p>HW3 (20%):<span style="background-color: #ffff00;">建立 Webots 桌上籃球遊戲機模擬系統</span></p>
-<p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW3 - 學員學號</p>
-<p></p>
-<h1>Midterm</h1>
+<p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW3 - 41023137</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Ntt95vz6bb8" width="560"></iframe></p>
+<p><a href="/downloads/hw3.7z">hw3.7z</a></p>
+<p>操作過程及心得：這個作業要將繪製好的發射器和籃框等圖檔利用程式轉成obj檔之後，再匯入webots進行節點設定和運動模擬。一開始跟前兩個作業一樣要先建robot，在children下方建一個solid作為base以及兩個joint，分別是joint1和joint4，然後點開joint1在endpoint新增solid，並將名稱改為link1，然後在下方chlidren依序建立一個cadshape和一個joint，joint一樣改名叫joint2，以此類推，到joint3就只需要建cadshape了，因為joint4在最外面。cadshape內的url由joint1到joint3依序匯入press、connector和shooter的obj圖檔，endpoint下方的boundingobject加入mesh，url使用跟前面joint一樣的obj圖檔，physics也都打開。join4只需要在endpoint新增solidreference並點開選擇link3即可。最後是要修改joint參數，將jointparameters打開把每個joint的axis都調成x0.y0.z1.，然後依照繪製的圖形去量測出每個joint到原點的相對位置去調整x和y座標並輸入進anchor。以上就是發射器本體大概的設定流程，整體上來說跟期兩個作業蠻相似的，只是形狀比較複雜。再來是籃框，在robot的children建立一個solid並改名為stand，chlidren裡面建一個pose和DistanceSensor，pose的<span>chlidren裡面建一個cadshape，url將繪製好的藍框obj圖檔匯入，並利用translation和rotation調整方向和位置到發射器前方，DistanceSensor的<span>chlidren裡面建一個shape，點開之後下面的geometry再建一個sphere，調整geometry下方的radius可以senser的感應範圍調整到跟籃框的範圍一樣，DistanceSensor的名稱要改成senser，因為我們程式裡的名稱是這樣設定的。球的部分就不能在robot裡面建立，要另外在robot下方建立一個solid，名字可以改叫ball，裡面的chlidren加入一個shape，下面的geometry再建一個sphere，最後利用translation調整位置至發射器上方即可。新增motor的方式跟前兩個作業一樣在joint1的device建一個rotationmotor，名稱改為motor1，下面的max torque要改為10000。robot裡面的controller要加入控制運動的程式，這次選擇的是sensor。WorldInfo下方的coordinateSystem要設為NUE。</span></span></p>
+<p></p><h1>Midterm</h1>
 <p>本課程所繳交的期中成績為學員自評之學習期望成績.</p>
 <p>期中考週的自評期望成績繳交流程:</p>
 <ol>
